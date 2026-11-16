@@ -1,14 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <title>Patient lab</title>
+        <meta charset="UTF-8">
+        <!-- Tells phones to use their real screen width, so the layout can be responsive -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>PatientLab | Understand Your Laboratory Tests</title>
         <link rel="stylesheet" href="style.css">
-    </head> 
+    </head>
     <body>
-        <h1>Discover your health one test at a time</h1>
-        <p>Making laboratory easier to understand</p>
-        <button id="exploreBtn">Explore laboratory tests</button>
-        <script src="script.js"></script> 
+        <div class="container">
+            <header class="hero">
+                <h1>Discover your health one test at a time</h1>
+                <p>Making laboratory science easier to understand.</p>
+                <button
+                    id="exploreBtn"
+                    class="explore-btn"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="testList"
+                >Explore laboratory tests</button>
+            </header>
+
+            <main>
+                <!-- Empty for now: script.js fills it with one card per test.
+                     The "hidden" attribute keeps it hidden until the button is clicked. -->
+                <section id="testList" class="test-list" aria-label="Laboratory tests" hidden></section>
+            </main>
+
+            <footer class="disclaimer">
+                <p>
+                    <strong>Please note:</strong> This information is for general education only.
+                    It is not medical advice and cannot be used to diagnose any condition.
+                    Always speak to a qualified healthcare professional about your test results.
+                </p>
+            </footer>
+        </div>
+
+        <script src="script.js"></script>
     </body>
-    
 </html>
