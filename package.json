@@ -1,0 +1,11 @@
+{
+  "name": "patientlab",
+  "version": "0.2.0",
+  "private": true,
+  "description": "Patient-friendly laboratory test information.",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "test": "node scripts/test-search.js",
+    "serve": "python3 -m http.server 8000"
+  }
+}

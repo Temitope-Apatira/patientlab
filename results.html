@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Understanding your laboratory results | PatientLab</title>
+    <meta name="description" content="Learn how to read a laboratory report: what parameters, units and reference intervals mean, why results can fall outside the range, and why context matters.">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="PatientLab">
+    <meta property="og:title" content="Understanding your laboratory results | PatientLab">
+    <meta property="og:description" content="How to read a laboratory report, explained in plain English.">
+    <meta name="theme-color" content="#246b55">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/style.css">
+    <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+    <!-- build:header -->
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <header class="site-header">
+        <div class="container site-header__inner">
+            <a class="brand" href="index.html"><svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect width="32" height="32" rx="9" fill="currentColor"/><path d="M13 8.5h6M14.2 8.5v8.6l-4.6 7a1.4 1.4 0 0 0 1.2 2.2h10.4a1.4 1.4 0 0 0 1.2-2.2l-4.6-7V8.5" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M11.6 21.5h8.8" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/></svg><span>PatientLab</span></a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span>Menu</span>
+            </button>
+            <nav id="site-nav" class="site-nav" aria-label="Main">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="tests.html">Explore tests</a></li>
+                    <li><a href="preparation.html">Test preparation</a></li>
+                    <li><a href="results.html" aria-current="page">Understand results</a></li>
+                    <li><a href="learn.html">Learn</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- /build:header -->
+
+    <main id="main">
+        <div class="container container--narrow">
+            <header class="page-header">
+                <p class="eyebrow">Understand results</p>
+                <h1>Understanding your laboratory results</h1>
+                <p class="lead">Laboratory reports are written for healthcare professionals, so they can be hard to follow. This guide explains how a report is laid out and what the numbers mean, so you can have a more informed conversation about your results.</p>
+            </header>
+
+            <div class="callout callout--caution" role="note">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 11v6M12 7.5v.01" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                <p><strong>PatientLab can't interpret your own results.</strong> This page explains general principles only. A qualified healthcare professional, who knows your history, symptoms and other test results, should explain what your results mean for you.</p>
+            </div>
+
+            <nav class="toc" aria-labelledby="toc-title">
+                <h2 id="toc-title">On this page</h2>
+                <ol>
+                    <li><a href="#report-layout">How a report is laid out</a></li>
+                    <li><a href="#parameters">What a parameter is</a></li>
+                    <li><a href="#units">What the units mean</a></li>
+                    <li><a href="#reference-intervals">Reference intervals</a></li>
+                    <li><a href="#outside-range">Why results fall outside the range</a></li>
+                    <li><a href="#labs-differ">Why laboratories differ</a></li>
+                    <li><a href="#context">Why context matters</a></li>
+                    <li><a href="#questions">Questions to ask</a></li>
+                </ol>
+            </nav>
+
+            <div class="prose">
+                <h2 id="report-layout">How a report is laid out</h2>
+                <p>Most reports show each result in a row, with the same few columns. Here is an example, with the main parts labelled.</p>
+            </div>
+
+            <figure class="example-report" aria-labelledby="example-caption">
+                <div class="example-report__label">
+                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 11v6M12 7.5v.01" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                    <span id="example-caption">Illustrative example only: invented values, not real patient data. The reference intervals shown are examples, not standards.</span>
+                </div>
+                <div class="table-wrap">
+                    <table class="data-table">
+                        <caption class="visually-hidden">Example full blood count report</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Test <span class="marker">A</span></th>
+                                <th scope="col">Result <span class="marker">B</span></th>
+                                <th scope="col">Units <span class="marker">C</span></th>
+                                <th scope="col">Reference interval <span class="marker">D</span></th>
+                                <th scope="col">Flag <span class="marker">E</span></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><th scope="row">Haemoglobin</th><td>118</td><td>g/L</td><td class="nowrap">120 – 150</td><td><span class="flag flag--low" title="Low">L</span></td></tr>
+                            <tr><th scope="row">White cell count</th><td>6.2</td><td>×10⁹/L</td><td class="nowrap">4.0 – 10.0</td><td></td></tr>
+                            <tr><th scope="row">Platelets</th><td>410</td><td>×10⁹/L</td><td class="nowrap">150 – 400</td><td><span class="flag flag--high" title="High">H</span></td></tr>
+                            <tr><th scope="row">MCV</th><td>84</td><td>fL</td><td class="nowrap">80 – 100</td><td></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </figure>
+
+            <div class="prose">
+                <ol class="annotations">
+                    <li><strong>Test (parameter).</strong> What was measured. Reports often use abbreviations, such as Hb for haemoglobin or MCV for mean cell volume.</li>
+                    <li><strong>Result.</strong> The value measured in your sample.</li>
+                    <li><strong>Units.</strong> What the number is counting or measuring. The same test can be reported in different units in different countries.</li>
+                    <li><strong>Reference interval.</strong> The range of results the laboratory usually sees in healthy people. It is sometimes called the “reference range” or “normal range”.</li>
+                    <li><strong>Flag.</strong> A marker showing that a result is outside the reference interval, usually H for high and L for low. Some laboratories also highlight results that need urgent attention.</li>
+                </ol>
+
+                <h3>Reading this example</h3>
+                <p>In this invented report, the haemoglobin is slightly below the example reference interval and the platelet count is slightly above it. On its own, this doesn't tell you what is going on. A healthcare professional would look at symptoms, history, any previous results and possibly further tests. Small differences like these are often not significant, and the test may simply be repeated.</p>
+
+                <h2 id="parameters">What a parameter is</h2>
+                <p>A parameter is one specific thing that has been measured. Some tests have just one parameter (for example, glucose). Others, like a <a href="tests/full-blood-count.html">full blood count</a> or <a href="tests/liver-function-tests.html">liver function tests</a>, are groups of related parameters reported together. Healthcare professionals often look at the pattern across a group, rather than at a single value.</p>
+
+                <h2 id="units">What the units mean</h2>
+                <p>Units tell you what the number is measuring: the <em>amount</em> of a substance, the <em>number</em> of cells, or the <em>activity</em> of an enzyme in a set volume of blood or urine.</p>
+            </div>
+
+            <div class="table-wrap">
+                <table class="data-table">
+                    <caption class="visually-hidden">Common units on laboratory reports</caption>
+                    <thead><tr><th scope="col">Unit</th><th scope="col">Say it as</th><th scope="col">What it means</th></tr></thead>
+                    <tbody>
+                        <tr><td class="nowrap">mmol/L</td><td>millimoles per litre</td><td>The amount (number of molecules) of a substance in one litre. Used for glucose, cholesterol, sodium and potassium.</td></tr>
+                        <tr><td class="nowrap">µmol/L</td><td>micromoles per litre</td><td>The same idea, but one thousand times smaller. Used for creatinine and bilirubin.</td></tr>
+                        <tr><td class="nowrap">mg/dL</td><td>milligrams per decilitre</td><td>The weight of a substance in one tenth of a litre. Used in some countries instead of mmol/L.</td></tr>
+                        <tr><td class="nowrap">g/L or g/dL</td><td>grams per litre or decilitre</td><td>Used for larger amounts, such as haemoglobin and albumin.</td></tr>
+                        <tr><td class="nowrap">×10⁹/L</td><td>times ten to the nine per litre</td><td>Thousands of millions of cells in one litre. Used for white cells and platelets.</td></tr>
+                        <tr><td class="nowrap">U/L</td><td>units per litre</td><td>The activity of an enzyme, such as ALT or ALP, rather than its weight.</td></tr>
+                        <tr><td class="nowrap">fL</td><td>femtolitres</td><td>A tiny volume, used to describe the average size of a red blood cell.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="prose">
+                <p>Because units differ, you can't compare a number from one report with a number from another unless the units are the same. For example, a glucose result reported in mmol/L looks very different from the same result in mg/dL.</p>
+
+                <h2 id="reference-intervals">Reference intervals</h2>
+                <p>A reference interval is worked out by measuring the test in a large group of healthy people. It usually covers the middle 95% of their results. That means, by design, about <strong>1 in 20 healthy people</strong> will have a result just outside the interval for any single test.</p>
+                <p>The more tests you have at once, the more likely it is that at least one will fall slightly outside its interval, even if you are completely well.</p>
+                <p>Some tests have different reference intervals depending on your age, sex or whether you are pregnant. For a few tests, such as cholesterol or the INR for people on warfarin, results are compared with a <em>target</em> set by your healthcare provider instead.</p>
+
+                <h2 id="outside-range">Why results can fall outside the range</h2>
+                <p>A result outside the reference interval doesn't necessarily mean you have a disease. Common reasons include:</p>
+                <ul>
+                    <li><strong>Normal variation.</strong> Some healthy people naturally sit just outside an interval.</li>
+                    <li><strong>Recent food, drink, exercise or alcohol.</strong></li>
+                    <li><strong>Time of day.</strong> Some substances rise and fall over 24 hours.</li>
+                    <li><strong>Medicines and supplements.</strong></li>
+                    <li><strong>A recent illness or infection</strong>, even a mild one.</li>
+                    <li><strong>Pregnancy, age or ancestry</strong>, which can shift what is typical.</li>
+                    <li><strong>How the sample was collected or handled</strong>, for example a long delay before testing, or damaged red cells in the tube.</li>
+                </ul>
+                <p>That's why a healthcare professional may ask for a repeat test before drawing any conclusions.</p>
+
+                <h2 id="labs-differ">Why reference intervals differ between laboratories</h2>
+                <p>Each laboratory sets or checks its own reference intervals. They can differ because laboratories:</p>
+                <ul>
+                    <li>use different analysers, reagents and methods</li>
+                    <li>serve different populations</li>
+                    <li>follow different national guidelines</li>
+                </ul>
+                <p>Always compare your result with the reference interval printed on <strong>your</strong> report, not one from another laboratory or a website. This is also why PatientLab doesn't list numeric ranges for each test.</p>
+
+                <h2 id="context">Why results are interpreted in context</h2>
+                <p>A laboratory result is one piece of information. To understand what it means for you, a healthcare professional considers:</p>
+                <ul>
+                    <li>your symptoms and medical history</li>
+                    <li>your medicines</li>
+                    <li>your previous results, as a change over time can matter more than a single value</li>
+                    <li>other test results and examinations</li>
+                </ul>
+                <p>Two people with exactly the same result may be given different advice, and both can be right.</p>
+
+                <h2 id="questions">Questions you could ask about your results</h2>
+                <ul class="checklist">
+                    <li>What was this test looking for?</li>
+                    <li>Are any of my results outside the reference interval, and does that matter for me?</li>
+                    <li>How do these results compare with my previous ones?</li>
+                    <li>Do I need any further tests, or a repeat test?</li>
+                    <li>Is there anything I should do, or stop doing, because of these results?</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <!-- build:footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="site-footer__top">
+                <div class="site-footer__about">
+                    <a class="brand brand--footer" href="index.html"><svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect width="32" height="32" rx="9" fill="currentColor"/><path d="M13 8.5h6M14.2 8.5v8.6l-4.6 7a1.4 1.4 0 0 0 1.2 2.2h10.4a1.4 1.4 0 0 0 1.2-2.2l-4.6-7V8.5" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M11.6 21.5h8.8" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/></svg><span>PatientLab</span></a>
+                    <p>Clear, trustworthy information about laboratory tests, written for patients.</p>
+                </div>
+                <nav aria-label="Footer">
+                    <ul class="site-footer__links">
+                        <li><a href="tests.html">Explore tests</a></li>
+                        <li><a href="preparation.html">Test preparation</a></li>
+                        <li><a href="results.html">Understand results</a></li>
+                        <li><a href="learn.html">Learn</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="site-footer__disclaimer">
+                <h2>Medical disclaimer</h2>
+                <p>PatientLab provides general educational information about laboratory tests. It is not medical advice, cannot diagnose any condition and is not a substitute for advice from a qualified healthcare professional. Always discuss your results and any preparation instructions with your healthcare provider or laboratory. If you feel very unwell, seek urgent medical help.</p>
+                <p>PatientLab does not ask for, collect or store any personal health information.</p>
+            </div>
+            <p class="site-footer__copyright">&copy; 2026 PatientLab</p>
+        </div>
+    </footer>
+    <!-- /build:footer -->
+
+    <script src="js/site.js"></script>
+</body>
+</html>

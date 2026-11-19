@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Explore laboratory tests | PatientLab</title>
+    <meta name="description" content="Search and browse laboratory tests by name, abbreviation or category. Find out what each test is for, how to prepare and how results are reported.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="PatientLab">
+    <meta property="og:title" content="Explore laboratory tests | PatientLab">
+    <meta property="og:description" content="Search and browse laboratory tests, explained in plain English.">
+    <meta name="theme-color" content="#246b55">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/style.css">
+    <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+    <!-- build:header -->
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <header class="site-header">
+        <div class="container site-header__inner">
+            <a class="brand" href="index.html"><svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect width="32" height="32" rx="9" fill="currentColor"/><path d="M13 8.5h6M14.2 8.5v8.6l-4.6 7a1.4 1.4 0 0 0 1.2 2.2h10.4a1.4 1.4 0 0 0 1.2-2.2l-4.6-7V8.5" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M11.6 21.5h8.8" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/></svg><span>PatientLab</span></a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span>Menu</span>
+            </button>
+            <nav id="site-nav" class="site-nav" aria-label="Main">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="tests.html" aria-current="page">Explore tests</a></li>
+                    <li><a href="preparation.html">Test preparation</a></li>
+                    <li><a href="results.html">Understand results</a></li>
+                    <li><a href="learn.html">Learn</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- /build:header -->
+
+    <main id="main">
+        <div class="container">
+            <header class="page-header">
+                <h1>Explore laboratory tests</h1>
+                <p class="lead">Search by the test name on your request form, an abbreviation, or a simple word such as “kidney” or “sugar”.</p>
+            </header>
+
+            <!-- Search and filters. Hidden until JavaScript loads; without it, the full list below still works. -->
+            <div id="explorer-controls" class="explorer-controls" hidden>
+                <form role="search" action="tests.html" method="get">
+                    <label class="label" for="test-search">Search tests</label>
+                    <div class="search-field">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="m20 20-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                        <input id="test-search" name="q" type="search" placeholder="e.g. FBC, E/U/Cr, cholesterol, thyroid" autocomplete="off" aria-describedby="results-count">
+                    </div>
+                </form>
+
+                <fieldset>
+                    <legend class="label">Filter by category</legend>
+                    <div class="chip-list" data-category-filters>
+                        <!-- build:category-filters -->
+                            <button type="button" class="chip" data-category="" aria-pressed="true">All tests <span class="chip__count">10</span></button>
+                            <button type="button" class="chip" data-category="haematology" aria-pressed="false">Full Blood Count and Haematology <span class="chip__count">1</span></button>
+                            <button type="button" class="chip" data-category="clinical-chemistry" aria-pressed="false">Clinical Chemistry <span class="chip__count">1</span></button>
+                            <button type="button" class="chip" data-category="electrolytes-urea-creatinine" aria-pressed="false">Electrolytes, Urea and Creatinine <span class="chip__count">1</span></button>
+                            <button type="button" class="chip" data-category="liver" aria-pressed="false">Liver Function Tests <span class="chip__count">1</span></button>
+                            <button type="button" class="chip" data-category="lipids" aria-pressed="false">Lipid Profile <span class="chip__count">1</span></button>
+                            <button type="button" class="chip" data-category="endocrinology" aria-pressed="false">Endocrinology and Hormones <span class="chip__count">1</span></button>
+                            <button type="button" class="chip" data-category="immunology-serology" aria-pressed="false">Immunology and Serology <span class="chip__count">1</span></button>
+                            <button type="button" class="chip" data-category="microbiology" aria-pressed="false">Microbiology <span class="chip__count">1</span></button>
+                            <button type="button" class="chip" data-category="coagulation" aria-pressed="false">Coagulation <span class="chip__count">1</span></button>
+                            <button type="button" class="chip" data-category="tumour-markers" aria-pressed="false">Tumour Markers <span class="chip__count">1</span></button>
+                        <!-- /build:category-filters -->
+                    </div>
+                </fieldset>
+            </div>
+
+            <div class="results-bar">
+                <p id="results-count">Showing all tests</p>
+            </div>
+            <p id="results-announcer" class="visually-hidden" aria-live="polite"></p>
+
+            <div id="test-list" class="test-list">
+                <!-- build:test-list -->
+                <article class="test-card" data-test-id="full-blood-count">
+                    <p class="test-card__category">Full Blood Count and Haematology</p>
+                    <h2 class="test-card__title"><a href="tests/full-blood-count.html">Full Blood Count</a> <span class="test-card__abbr">FBC</span></h2>
+                    <p class="test-card__summary">A Full Blood Count looks at the three main types of cell in your blood: red blood cells, white blood cells and platelets. It is one of the most commonly requested blood tests and gives a broad picture of your general health.</p>
+                    <ul class="test-card__meta" aria-label="Key facts">
+                        <li><span class="badge badge--not-required">No fasting needed</span></li>
+                        <li><span class="badge badge--neutral">Blood sample</span></li>
+                    </ul>
+                </article>
+                <article class="test-card" data-test-id="fasting-plasma-glucose">
+                    <p class="test-card__category">Clinical Chemistry</p>
+                    <h2 class="test-card__title"><a href="tests/fasting-plasma-glucose.html">Fasting Plasma Glucose</a> <span class="test-card__abbr">FPG</span></h2>
+                    <p class="test-card__summary">Measures the amount of glucose (sugar) in your blood after you have not eaten for several hours. Glucose is the body&#39;s main source of energy, and its level is controlled mainly by the hormone insulin.</p>
+                    <ul class="test-card__meta" aria-label="Key facts">
+                        <li><span class="badge badge--required">Fasting needed</span></li>
+                        <li><span class="badge badge--neutral">Blood sample</span></li>
+                    </ul>
+                </article>
+                <article class="test-card" data-test-id="urea-electrolytes-creatinine">
+                    <p class="test-card__category">Electrolytes, Urea and Creatinine</p>
+                    <h2 class="test-card__title"><a href="tests/urea-electrolytes-creatinine.html">Urea, Electrolytes and Creatinine</a> <span class="test-card__abbr">U&amp;E</span></h2>
+                    <p class="test-card__summary">A group of blood tests that measures important salts (electrolytes) and waste products in your blood. Together, they show how well your kidneys are working and the balance of fluid and salts in your body.</p>
+                    <ul class="test-card__meta" aria-label="Key facts">
+                        <li><span class="badge badge--not-required">No fasting needed</span></li>
+                        <li><span class="badge badge--neutral">Blood sample</span></li>
+                    </ul>
+                </article>
+                <article class="test-card" data-test-id="liver-function-tests">
+                    <p class="test-card__category">Liver Function Tests</p>
+                    <h2 class="test-card__title"><a href="tests/liver-function-tests.html">Liver Function Tests</a> <span class="test-card__abbr">LFT</span></h2>
+                    <p class="test-card__summary">A group of blood tests that gives information about the health of your liver. Despite the name, most of these tests show whether the liver is inflamed or damaged, rather than directly measuring how well it works.</p>
+                    <ul class="test-card__meta" aria-label="Key facts">
+                        <li><span class="badge badge--not-required">No fasting needed</span></li>
+                        <li><span class="badge badge--neutral">Blood sample</span></li>
+                    </ul>
+                </article>
+                <article class="test-card" data-test-id="lipid-profile">
+                    <p class="test-card__category">Lipid Profile</p>
+                    <h2 class="test-card__title"><a href="tests/lipid-profile.html">Lipid Profile</a></h2>
+                    <p class="test-card__summary">Measures the fats (lipids) in your blood, including cholesterol and triglycerides. These fats are essential for the body, but high levels of some of them over many years increase the risk of heart disease and stroke.</p>
+                    <ul class="test-card__meta" aria-label="Key facts">
+                        <li><span class="badge badge--depends">Fasting sometimes needed</span></li>
+                        <li><span class="badge badge--neutral">Blood sample</span></li>
+                    </ul>
+                </article>
+                <article class="test-card" data-test-id="thyroid-function-tests">
+                    <p class="test-card__category">Endocrinology and Hormones</p>
+                    <h2 class="test-card__title"><a href="tests/thyroid-function-tests.html">Thyroid Function Tests</a> <span class="test-card__abbr">TFT</span></h2>
+                    <p class="test-card__summary">Blood tests that check how well your thyroid gland is working. The thyroid is a small gland in your neck that makes hormones controlling how your body uses energy (your metabolism).</p>
+                    <ul class="test-card__meta" aria-label="Key facts">
+                        <li><span class="badge badge--not-required">No fasting needed</span></li>
+                        <li><span class="badge badge--neutral">Blood sample</span></li>
+                    </ul>
+                </article>
+                <article class="test-card" data-test-id="hepatitis-b-surface-antigen">
+                    <p class="test-card__category">Immunology and Serology</p>
+                    <h2 class="test-card__title"><a href="tests/hepatitis-b-surface-antigen.html">Hepatitis B Surface Antigen</a> <span class="test-card__abbr">HBsAg</span></h2>
+                    <p class="test-card__summary">A blood test that looks for a protein from the hepatitis B virus. Hepatitis B is a viral infection that affects the liver. Finding this protein (the surface antigen) in your blood shows that you currently have the infection.</p>
+                    <ul class="test-card__meta" aria-label="Key facts">
+                        <li><span class="badge badge--not-required">No fasting needed</span></li>
+                        <li><span class="badge badge--neutral">Blood sample</span></li>
+                    </ul>
+                </article>
+                <article class="test-card" data-test-id="urine-microscopy-culture-sensitivity">
+                    <p class="test-card__category">Microbiology</p>
+                    <h2 class="test-card__title"><a href="tests/urine-microscopy-culture-sensitivity.html">Urine Microscopy, Culture and Sensitivity</a> <span class="test-card__abbr">Urine MCS</span></h2>
+                    <p class="test-card__summary">A urine test that looks for signs of infection in your urinary tract (your bladder, kidneys and the tubes that connect them). If bacteria are found, the laboratory identifies them and tests which antibiotics are likely to work.</p>
+                    <ul class="test-card__meta" aria-label="Key facts">
+                        <li><span class="badge badge--not-required">No fasting needed</span></li>
+                        <li><span class="badge badge--neutral">Urine sample</span></li>
+                    </ul>
+                </article>
+                <article class="test-card" data-test-id="prothrombin-time-inr">
+                    <p class="test-card__category">Coagulation</p>
+                    <h2 class="test-card__title"><a href="tests/prothrombin-time-inr.html">Prothrombin Time and INR</a> <span class="test-card__abbr">PT/INR</span></h2>
+                    <p class="test-card__summary">Measures how long it takes a sample of your blood to clot. The INR is a standardised version of the result that allows comparison between laboratories. It is the main test used to monitor treatment with warfarin.</p>
+                    <ul class="test-card__meta" aria-label="Key facts">
+                        <li><span class="badge badge--not-required">No fasting needed</span></li>
+                        <li><span class="badge badge--neutral">Blood sample</span></li>
+                    </ul>
+                </article>
+                <article class="test-card" data-test-id="prostate-specific-antigen">
+                    <p class="test-card__category">Tumour Markers</p>
+                    <h2 class="test-card__title"><a href="tests/prostate-specific-antigen.html">Prostate-Specific Antigen</a> <span class="test-card__abbr">PSA</span></h2>
+                    <p class="test-card__summary">Measures the level of prostate-specific antigen, a protein made by the prostate gland, in your blood. PSA can be raised by prostate cancer, but also by many common conditions that are not cancer.</p>
+                    <ul class="test-card__meta" aria-label="Key facts">
+                        <li><span class="badge badge--not-required">No fasting needed</span></li>
+                        <li><span class="badge badge--neutral">Blood sample</span></li>
+                    </ul>
+                </article>
+                <!-- /build:test-list -->
+            </div>
+
+            <div id="empty-state" class="empty-state" hidden>
+                <h2>No matching tests</h2>
+                <p id="empty-message"></p>
+                <p>You could try:</p>
+                <ul>
+                    <li>checking the spelling</li>
+                    <li>using the abbreviation from your request form, such as FBC or LFT</li>
+                    <li>a simpler word, such as “liver”, “urine” or “clotting”</li>
+                </ul>
+                <div class="empty-state__actions">
+                    <button id="search-all-categories" class="btn btn--primary" type="button" hidden></button>
+                    <button class="btn btn--secondary" type="button" data-clear-filters>Clear search and filters</button>
+                </div>
+                <p class="review-note">PatientLab is growing. If a test isn't listed yet, your healthcare provider or laboratory can explain it.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- build:footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="site-footer__top">
+                <div class="site-footer__about">
+                    <a class="brand brand--footer" href="index.html"><svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect width="32" height="32" rx="9" fill="currentColor"/><path d="M13 8.5h6M14.2 8.5v8.6l-4.6 7a1.4 1.4 0 0 0 1.2 2.2h10.4a1.4 1.4 0 0 0 1.2-2.2l-4.6-7V8.5" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M11.6 21.5h8.8" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/></svg><span>PatientLab</span></a>
+                    <p>Clear, trustworthy information about laboratory tests, written for patients.</p>
+                </div>
+                <nav aria-label="Footer">
+                    <ul class="site-footer__links">
+                        <li><a href="tests.html">Explore tests</a></li>
+                        <li><a href="preparation.html">Test preparation</a></li>
+                        <li><a href="results.html">Understand results</a></li>
+                        <li><a href="learn.html">Learn</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="site-footer__disclaimer">
+                <h2>Medical disclaimer</h2>
+                <p>PatientLab provides general educational information about laboratory tests. It is not medical advice, cannot diagnose any condition and is not a substitute for advice from a qualified healthcare professional. Always discuss your results and any preparation instructions with your healthcare provider or laboratory. If you feel very unwell, seek urgent medical help.</p>
+                <p>PatientLab does not ask for, collect or store any personal health information.</p>
+            </div>
+            <p class="site-footer__copyright">&copy; 2026 PatientLab</p>
+        </div>
+    </footer>
+    <!-- /build:footer -->
+
+    <script src="js/data/categories.js"></script>
+    <script src="js/data/tests.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/explorer.js"></script>
+    <script src="js/site.js"></script>
+</body>
+</html>
